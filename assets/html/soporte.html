@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda y Soporte - Yape</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><img class="logo" src="assets/img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html">Inicio</a></li>
+                    
+                    <li class="nav-item"><a class="nav-link" href="seguridad.html">Seguridad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html">Registro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Iniciar sesión</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <h1>Ayuda y Soporte - Yape</h1>
+    <main class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2>Preguntas Frecuentes (FAQ)</h2>
+                <div class="mb-4">
+                    <h5>¿Cómo puedo bloquear mi cuenta?</h5>
+                    <p>Para bloquear tu cuenta, ingresa a la sección "Bloquear tu cuenta" en el menú principal y sigue los pasos indicados.</p>
+                </div>
+                <div class="mb-4">
+                    <h5>¿Qué hago si no recuerdo mi contraseña?</h5>
+                    <p>Si olvidaste tu contraseña, dirígete a la página de recuperación de cuenta y sigue los pasos para restablecerla.</p>
+                </div>
+
+                <h2>¿Necesitas más ayuda?</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="contactEmail" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="Tu correo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contactMessage" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="contactMessage" rows="4" placeholder="Escribe tu mensaje"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Yape. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script type="module" src="../js/soporte.js"></script>
+</body>
+</html>

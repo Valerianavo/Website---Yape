@@ -1,0 +1,157 @@
+@import url('fonts.css');
+/* REVISEN LO QUE NOS MANDO YAPE PARA EL DISEÑO Y EL LOGO */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #802F89;
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+.logo{
+    height: 110px;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 80px;
+    padding-top: 10px;
+}
+ul li {
+    margin: 0 15px;
+}
+ 
+a.nav-link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 60px;
+}
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(30deg, #742384 45%, #10CBB4 100%);
+    border-radius: 13px;
+    color: white;
+    width: 700px;
+    height: 400px;
+    margin: 40px;
+    
+}
+
+.tyh1 {
+    font-size: 35px;
+    margin-bottom: 45px;
+}
+
+.tyse {
+    font-family: 'Inter', sans-serif;
+    color: #802F89;
+}
+.btn-bloqueo {
+    background-color: #20D0C2;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.btn-bloqueo:hover {
+    background-color: #11A89E;
+    color: #edebf3;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 9px rgb(0, 0, 0, 0.3);
+}
+
+.imagen1{
+    float: right;
+    border-radius: 13px;
+    margin-top: -530px;
+    margin-right: 10px;
+}
+.seguridad {
+    padding: 20px;
+    background-color: rgb(230, 235, 234);
+}
+
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.tarjeta {
+    background: #E2DFE8;
+    width: 300px;
+    height: 170px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+    cursor: pointer;
+    flex: 1 1 300px;
+    transition: height 0.3s ease-in-out;
+    overflow: visible;
+}
+
+
+
+.tarjeta .tarimg {
+    width: 100%;
+    height: 100px;      
+    border: 16px;
+    position: absolute; 
+    top: 110%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tarjeta:hover {
+    height: 270px;
+}
+
+.tarjeta:hover  .tarimg{
+    visibility: visible;
+    opacity: 1;
+}
+footer {
+    background-color: #212121;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive tu terrorrrrr */
+@media screen and (max-width: 890px){
+    .nav-links a{
+        font-size: 14px;
+    }
+    .nav-links a i{
+        font-size: 14px;
+    }
+    .category-button{
+        font-size: 10px;
+    }
+}

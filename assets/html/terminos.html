@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones</title>
+    <link rel="stylesheet" href="../css/terminos.css">
+    <!--Toastify JS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+</head>
+<body>
+    <header id="header-t" class="tyc">
+        <h1>Términos y Condiciones</h1>
+         <!-- Primer main (se ocultará después de que se haga clic en el botón) -->
+    <main id="main-aceptar-terminos">
+        <p class="sub">Hemos enviado un correo de confirmación. Para continuar, acepta los términos.</p>  
+    </main>
+    </header>
+    <section id="continuar" class="container">
+        <div class="blog">
+            <div class="flex">
+                <div class="flex-child">
+                    <div class="post">
+                        <img src="../img/Suspensión_Temporal.jpg" alt="">
+                        <div class="info">
+                            <h3>Suspensión temporal:</h3>
+                            <p class="descrip">Tu número quedará inactivo y no podrás realizar ni recibir pagos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-child">
+                    <div class="post">
+                        <img src="../img/Acceso Restringido.jpg" alt="">
+                        <div class="info">
+                            <h3>Acceso restringido:</h3>
+                            <p class="descrip">No podrás iniciar sesión en la app de Yape hasta desbloquear tu cuenta.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-child">
+                    <div class="post">
+                        <img src="../img/Reversión no inmediata.jpg" alt="">
+                        <div class="info">
+                            <h3>Reversión no inmediata:</h3>
+                            <p class="descrip">El desbloqueo puede tomar hasta <strong>24 horas</strong> en procesarse.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-child">
+                    <div class="post">
+                        <img src="assets/img/Verificación obligatoria.jpg" alt="">
+                        <div class="info">
+                            <h3>Verificación obligatoria</h3>
+                            <p class="descrip">Para recuperar tu cuenta, deberás seguir el proceso de autenticación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-child">
+                    <div class="post">
+                        <img src="assets/img/Confirmación de correo.jpg" alt="">
+                        <div class="info">
+                            <h3>Confirmación por correo:</h3>
+                            <p class="descrip">Se enviará un correo de confirmación a <strong id="correoUsuario"></strong> con más detalles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-btnacep">
+            <button id="btn-aceptar-terminos" class="btn-aceptar" disabled>Aceptar y Continuar</button>
+        </div>
+    </section>
+
+    <!-- Sección de validación -->
+    <section id="validacion" class="container" style="display: none;">
+        <header>
+            <h2>Validando tu información...</h2>
+        </header>
+        <p>Por favor, espera unos segundos mientras procesamos tu solicitud.</p>
+    </section>
+
+    <!-- Sección de éxito -->
+    <section id="exito" class="container" style="display: none;">
+        <header class="hea-ex">
+            <h2>✅ ¡Cuenta bloqueada con éxito!</h2>
+        </header>
+        <div class="cont-ex">
+            <p class="parr-ex">Un correo de confirmación ha sido enviado a <strong id="correoConfirmacion"></strong> con instrucciones para desbloquear tu cuenta.</p>
+            <button class="btn-volex">
+                <a href="desbloqueo.html">Volver al inicio</a>
+            </button>
+        </div>
+    </section>
+
+    <script type="module">
+        // Selección de los elementos de validación, éxito y primer main
+        const validacionSection = document.getElementById("validacion");
+        const exitoSection = document.getElementById("exito");
+        const correoConfirmacion = document.getElementById("correoConfirmacion");
+        const mainAceptarTerminos = document.getElementById("main-aceptar-terminos");
+        const headerH1 = document.getElementById("header-t");
+        const terminosContinuar = document.getElementById("continuar");
+
+        // Selección del botón de aceptar términos
+        const btnAceptarTerminos = document.getElementById("btn-aceptar-terminos");
+
+        // Habilitar el botón después de 4 segundos
+        setTimeout(() => btnAceptarTerminos.disabled = false, 4000);
+
+        btnAceptarTerminos.addEventListener("click", async () => {
+            mainAceptarTerminos.style.display = "none";
+            headerH1.style.display = "none";
+            terminosContinuar.style.display = "none"
+            validacionSection.style.display = "block"; 
+
+            setTimeout(() => {
+                validacionSection.style.display = "none"; 
+                exitoSection.style.display = "block";  
+
+                correoConfirmacion.textContent = "usuario@example.com";  
+            }, 3000);  
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+
+     <!--Toastify CDN-->
+     <script
+     type="text/javascript"
+     src="https://cdn.jsdelivr.net/npm/toastify-js"
+   ></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
+
+
+
+
