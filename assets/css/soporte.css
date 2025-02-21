@@ -1,0 +1,32 @@
+.title{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container{
+    margin-top: 2rem;
+}
+
+.card{
+    background: white;
+    border-radius: 12px;
+}
+
+.fag-item{
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
+}
+
+.btn-success{
+    background-color: #10CBB4;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.btn-success:hover{
+    background-color: #00AD97;
+}

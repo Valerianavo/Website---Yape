@@ -1,4 +1,5 @@
 body{
+    background-image: url(../img/speed-line-003-2.svg);
     font-family: 'Poppins', sans-serif;
     justify-content: center;
     align-items: center;
@@ -7,11 +8,10 @@ body{
 }
 
 .cont-bloq {
-    width: 400px;
-    position: relative;
+    top: 10vh;
+    display: table;
     margin: auto;
-    top: 200px;
-    transform: translateY(-50%); 
+    position: relative; 
     background: white;
     padding: 2rem;
     border-radius: 12px;

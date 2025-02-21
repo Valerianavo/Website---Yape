@@ -1,5 +1,5 @@
 html, body {
-    overflow-x: hidden; /* Evita desbordamiento horizontal */
+    overflow-x: hidden; 
     height: 100%;
 }
 
@@ -10,6 +10,7 @@ body {
     background-size: cover;
     font-weight: 900;
 }
+
 
 h2 {
     font-weight: 900;
@@ -24,6 +25,8 @@ h2 {
     text-decoration: none;
     display: inline-block;
     transition: 0.3s ease-in-out;
+    max-width: 700px !important; 
+    width: 80%; 
 }
 
 .btn-pri:hover,
@@ -34,19 +37,22 @@ h2 {
     border-color: #74ffec !important;
 }
 
+
+
 a.btn.btn-pri.align-items-center.gap-3.rounded-pill {
-    width: 1000px;
+    width: 900px;
     font-weight: 900;
+    max-width: 1000px;
 }
 
 section#register-section {
     border-radius: 30px;
-    max-width: 1100px;
+    max-width: 950px;
     width: 90%;
-    padding: 20px;
+    padding: 50px;
 }
 
-/* Botón de registro */
+
 button.btn.btn-purple.btn-lg {
     background-color: #9145c7;
     color: white;
@@ -61,7 +67,7 @@ button.btn.btn-purple.btn-lg:hover {
     background-color: #7d3bb1;
 }
 
-/* Animación para la imagen */
+
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
@@ -74,40 +80,28 @@ button.btn.btn-purple.btn-lg:hover {
     height: auto;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 1024px) {
-    #register-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 30px;
+/* RESPONSIVE*/
+@media (max-width: 993px){
+    .register-image img{
+        margin: 5px !important;
+        height: 250px;
+        width: 100% !important;
     }
-}
+    .btn-pri{
+        max-width: 500px !important; 
+    }
 
-@media (max-width: 768px) {
-    #register-section {
-        flex-direction: column;
+}
+@media (max-width: 769px){
+    .col-md-6 {
         width: 100%;
-        padding: 20px;
     }
 
-    .register-image {
-        display: none; /* Oculta la imagen en pantallas pequeñas */
+    .register-image{
+        display: none !important;
     }
+    .btn-pri{
+        max-width: 300px !important; 
+    }
+
 }
-
-@media (max-width: 576px) {
-    .input-group-text {
-        cursor: pointer;
-    }
-
-    #register-section {
-        padding: 15px;
-    }
-
-    button.btn.btn-purple.btn-lg {
-        padding: 10px;
-        font-size: 16px;
-    }
-}
-
