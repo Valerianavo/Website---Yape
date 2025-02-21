@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const verificarForm = document.getElementById("verificar-form");
     const mensaje = document.getElementById("mensaje");
 
-    // 🔹 Obtener UID desde la URL
     const params = new URLSearchParams(window.location.search);
     const uid = params.get("uid");
 
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         const codigoIngresado = document.getElementById("codigo-input").value.trim();
 
         try {
-            // 🔹 Obtener datos del usuario en Firestore
             const userDoc = await getDoc(doc(db, "usuarios", uid));
 
             if (!userDoc.exists()) {
@@ -29,7 +27,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const userData = userDoc.data();
 
-            // 🔹 Verificar el código ingresado
             if (userData.codigoVerificacion == codigoIngresado) {
                 await updateDoc(doc(db, "usuarios", uid), { verificado: true });
 

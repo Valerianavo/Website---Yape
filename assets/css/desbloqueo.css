@@ -1,17 +1,20 @@
 body{
     background-image: url(../img/speed-line-003-2.svg);
     font-family: 'Poppins', sans-serif;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+}
+
+header {
+    display: block ;
+    visibility: visible;
+    height: auto;
 }
 
 .cont-bloq {
-    top: 10vh;
+    top: 12vh;
     display: table;
     margin: auto;
-    position: relative; 
     background: white;
     padding: 2rem;
     border-radius: 12px;
@@ -34,7 +37,11 @@ p{
 .navbar{
     height: 100px;
     background-color: #7D2686;
-    padding: 5px 0;
+    
+}
+
+.navbar-collapse {
+    display: block;
 }
 
 .logo {
@@ -53,6 +60,7 @@ p{
 }
 
 .navbar-nav {
+    display: flex;
     gap: 90px;
 }
 
@@ -76,6 +84,11 @@ p{
     font-family: 'Inter', sans-serif;
 }
 
+button#btn-desbloquear {
+    margin: auto;
+}
+
+
 .btn-desbloquear::after {
     content: "";
     position: absolute;
@@ -97,4 +110,62 @@ p{
 .btn-desbloquear:hover::after {
     top: 100%;
     left: 100%;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 992px) {
+    .logo {
+        height: 50px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cont-bloq {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn-desbloquear {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 45px;
+    }
+
+    .navbar-toggler {
+        padding: 8px;
+    }
+
+    .cont-bloq {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .btn-desbloquear {
+        font-size: 14px;
+    }
 }

@@ -13,28 +13,57 @@
         <div class="menu-1">
             <nav class="navbar fixed-top navbar-expand-lg" >
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img class="logo" src="assets/img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
+                    <a class="navbar-brand" href="#"><img class="logo" src="../img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                         <ul class="menu1-ul">
+                            
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="assets/html/desbloqueo.html">desbloqueo</a>
+                                <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                                <a class="nav-link" href="seguridad.html">Seguridad</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="assets/html/seguridad.html">Seguridad</a>
+                                <a class="nav-link" href="soporte.html">Soporte</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="assets/html/soporte.html">Soporte</a>
+                                <a class="nav-link active" aria-current="page" href="../html/desbloqueo.html">Desbloquear cuenta</a>
                             </li>
-                           
                             
                         </ul>
                     </div>
                 </div>
             </nav>
         </div>
+        <!--Nav Responsive-->
+        <nav class="navbar bg-body-tertiary fixed-top menu-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logo" src="assets/img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="seguridad.html">Seguridad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="soporte.html">Soporte</a>
+                            </li>
+                        </ul>
+                        <!-- <button id="btn-cerrar-sesion" style="display: none;">Cerrar sesión</button> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <header class="text-center py-4">
@@ -72,6 +101,39 @@
             </div>
         </div>
     </main>
+
+    <footer style="background-color: #6d1b7b; color: white; padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div>
+                <img src="../img/Yape_Blanco.png" alt="Yape" style="height: 40px;">
+                <p>Síguenos en:</p>
+                <a href="#"><i class="bi bi-instagram" style="font-size: 30px; color: white;"></i></a>
+                <a href="#"><i class="bi bi-tiktok" style="font-size: 30px; color: white;"></i></a>
+                <a href="#"><i class="bi bi-facebook" style="font-size: 30px; color: white;"></i></a>
+                <a href="#"><i class="bi bi-linkedin" style="font-size: 30px; color: white;"></i></a>
+                <a href="#"><i class="bi bi-youtube" style="font-size: 30px; color: white;"></i></a>
+            </div>
+            <div>
+                <p><a href="#" style="color: white; text-decoration: none;">Términos y Condiciones</a></p>
+                <p><a href="poli-privacidad.html" style="color: white; text-decoration: none;">Política de privacidad y Datos personales</a></p>
+                <p><a href="#" style="color: white; text-decoration: none;">Política de Cookies</a></p>
+                <p><a href="#" style="color: white; text-decoration: none;">Consentimiento para el uso de cookies</a></p>
+            </div>
+            <div>
+                <i class="bi bi-book" style="font-size: 40px; color: white;"></i>
+                <p>Libro de Reclamaciones</p>
+            </div>
+            <div>
+                <button style="background-color: #9152a7; color: white; border: none; padding: 10px; margin: 5px; cursor: pointer;">
+                    <i class="bi bi-whatsapp"></i> Escríbenos por WhatsApp
+                </button>
+                <button style="background-color: #9152a7; color: white; border: none; padding: 10px; margin: 5px; cursor: pointer;">
+                    <i class="bi bi-briefcase"></i> Trabaja con nosotros
+                </button>
+            </div>
+        </div>
+        <p style="margin-top: 20px; font-size: 12px;">Yape © 2025. Todos los derechos reservados</p>
+    </footer>
 
 
     

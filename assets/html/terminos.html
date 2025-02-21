@@ -16,65 +16,127 @@
     />
 </head>
 <body>
-        <h1 class="tyc">Términos y Condiciones</h1>
-         <!-- Primer main (se ocultará después de que se haga clic en el botón) -->
+    <header>
+        <div class="menu-1">
+            <nav class="navbar fixed-top navbar-expand-lg" >
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img class="logo" src="../img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="menu1-ul">
+            
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="seguridad.html">Seguridad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="soporte.html">Soporte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="desbloqueo.html">Desbloquear cuenta</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--Nav Responsive-->
+        <nav class="navbar bg-body-tertiary fixed-top menu-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logo" src="../img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="seguridad.html">Seguridad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="soporte.html">Soporte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="desbloqueo.html">Desbloquear cuenta</a>
+                            </li>
+                        </ul>
+                        <!-- <button id="btn-cerrar-sesion" style="display: none;">Cerrar sesión</button> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <h1 class="tyc">Términos y Condiciones</h1>
+    
     <main id="main-aceptar-terminos">
         <p class="sub">Hemos enviado un correo de confirmación. Para continuar, acepta los siguientes terminos:</p>  
     </main>
-    </header>
+ 
     <section id="continuar" class="contn">
-        <div class="blog">
-            <div class="flex">
-                <div class="flex-child">
-                    <div class="post">
-                        <img src="../img/Suspensión Temporal.jpg" alt="">
-                        <div class="info">
-                            <h3>Suspensión temporal:</h3>
-                            <p class="descrip">Tu número quedará inactivo y no podrás realizar ni recibir pagos.</p>
+        <div class="pb-4 m-5">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5">
+                <div class="col">
+                    <div class="card h-100 small-card">
+                        <img src="../img/Confirmación de correo.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Confirmación por correo</h6>
+                            <p class="card-text">Se enviará un correo a <strong id="correoUsuario"></strong> con más detalles.</p>
                         </div>
                     </div>
                 </div>
-                <div class="flex-child">
-                    <div class="post">
-                        <img src="../img/Acceso Restringido.jpg" alt="">
-                        <div class="info">
-                            <h3>Acceso restringido:</h3>
-                            <p class="descrip">No podrás iniciar sesión en la app de Yape hasta desbloquear tu cuenta.</p>
+                <div class="col">
+                    <div class="card h-100 small-card">
+                        <img src="../img/Suspensión Temporal.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Suspensión temporal</h6>
+                            <p class="card-text">Tu número quedará inactivo y no podrás recibir pagos.</p>
                         </div>
                     </div>
                 </div>
-                <div class="flex-child">
-                    <div class="post">
-                        <img src="../img/Reversión no inmediata.jpg" alt="">
-                        <div class="info">
-                            <h3>Reversión no inmediata:</h3>
-                            <p class="descrip">El desbloqueo puede tomar hasta <strong>24 horas</strong> en procesarse.</p>
+                <div class="col">
+                    <div class="card h-100 small-card">
+                        <img src="../img/Acceso Restringido.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Acceso restringido</h6>
+                            <p class="card-text">No podrás iniciar sesión hasta desbloquear tu cuenta.</p>
                         </div>
                     </div>
                 </div>
-                <div class="flex-child">
-                    <div class="post">
-                        <img src="../img/Verificación obligatoria.jpg" alt="">
-                        <div class="info">
-                            <h3>Verificación obligatoria</h3>
-                            <p class="descrip">Para recuperar tu cuenta, deberás seguir el proceso de autenticación.</p>
+                <div class="col">
+                    <div class="card h-100 small-card">
+                        <img src="../img/Reversión no inmediata.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Reversión no inmediata</h6>
+                            <p class="card-text">El desbloqueo puede tomar hasta <strong>24 horas</strong>.</p>
                         </div>
                     </div>
                 </div>
-                <div class="flex-child">
-                    <div class="post">
-                        <img src="../img/Confirmación de correo.jpg" alt="">
-                        <div class="info">
-                            <h3>Confirmación por correo:</h3>
-                            <p class="descrip">Se enviará un correo de confirmación a <strong id="correoUsuario"></strong> con más detalles.</p>
+                <div class="col">
+                    <div class="card h-100 small-card">
+                        <img src="../img/Verificación obligatoria.jpg" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="card-title">Verificación obligatoria</h6>
+                            <p class="card-text">Deberás seguir el proceso de autenticación.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        
         <div class="contenedor-btnacep">
-            <button id="btn-aceptar-terminos" class="btn-aceptar" disabled>Aceptar y Continuar</button>
+            <button id="btn-aceptar-terminos" class="btn-aceptar btn-lg" disabled>Aceptar y Continuar</button>
         </div>
+        
     </section>
 
     <!-- Sección de validación -->
@@ -103,43 +165,15 @@
             <h2>✅ ¡Cuenta bloqueada con éxito!</h2>
         </header>
         <div class="cont-ex">
-            <p class="parr-ex">Te hemos enviado un correo de confirmación a <strong id="correoConfirmacion"></strong> con los pasos detallados para desbloquear tu cuenta.</p>
             <button class="btn-volex">
                 <a href="../../index.html">Volver al inicio</a>
             </button>
+            <br>
+            <img src="../img/yapito-jump.svg" style="width: 900px; height: 300px;" alt="">
         </div>
     </section>
 
-    <script type="module">
-        // Selección de los elementos de validación, éxito y primer main
-        const validacionSection = document.getElementById("validacion");
-        const exitoSection = document.getElementById("exito");
-        const correoConfirmacion = document.getElementById("correoConfirmacion");
-        const mainAceptarTerminos = document.getElementById("main-aceptar-terminos");
-        const headerH1 = document.getElementById("header-t");
-        const terminosContinuar = document.getElementById("continuar");
-
-        // Selección del botón de aceptar términos
-        const btnAceptarTerminos = document.getElementById("btn-aceptar-terminos");
-
-        // Habilitar el botón después de 4 segundos
-        setTimeout(() => btnAceptarTerminos.disabled = false, 4000);
-
-        btnAceptarTerminos.addEventListener("click", async () => {
-            mainAceptarTerminos.style.display = "none";
-            headerH1.style.display = "none";
-            terminosContinuar.style.display = "none"
-            validacionSection.style.display = "block"; 
-
-            setTimeout(() => {
-                validacionSection.style.display = "none"; 
-                exitoSection.style.display = "block";  
-
-                correoConfirmacion.textContent = "usuario@example.com";  
-            }, 3000);  
-        });
-    </script>
-    <script type="module" src="../js/index.js"></script>
+    <script type="module" src="../js/terminos.js"></script>
      <!--Toastify CDN-->
      <script
      type="text/javascript"

@@ -25,15 +25,12 @@ document.querySelector("form").addEventListener("submit", async function (event)
 
         console.log("Mensaje guardado con ID:", docRef.id);
 
-        // Mostrar mensaje de confirmación
-        // Mostrar mensaje de confirmación
         const confirmacion = document.getElementById("confirmacion");
         confirmacion.style.display = "block";
 
         // Limpiar formulario
         document.querySelector("form").reset();
 
-        // Ocultar mensaje después de 3 segundos
         setTimeout(() => {
             confirmacion.style.display = "none";
         }, 4000);

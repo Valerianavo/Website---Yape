@@ -14,10 +14,9 @@ import {
 
 import { showMessage } from "./toastMessage.js";
 
-// 📩 Inicializar EmailJS
+
 emailjs.init("98E6uq6a3OOJzKCjf");
 
-// 📩 Enviar código de verificación por correo
 async function enviarCodigoVerificacion(email, codigo) {
     try {
         await emailjs.send("Yape", "template_lp4051m", { codigo, to_email: email });
@@ -27,7 +26,6 @@ async function enviarCodigoVerificacion(email, codigo) {
     }
 }
 
-// 🔢 Generar y actualizar código de verificación en Firestore
 async function generarCodigo(uid, email) {
     const nuevoCodigo = Math.floor(100000 + Math.random() * 900000);
     await updateDoc(doc(db, "usuarios", uid), { codigoVerificacion: nuevoCodigo });
@@ -35,7 +33,6 @@ async function generarCodigo(uid, email) {
     await enviarCodigoVerificacion(email, nuevoCodigo);
 }
 
-// 📌 Registro de usuario
 document.addEventListener("DOMContentLoaded", () => {
     const registerForm = document.getElementById("register-form");
     const loginForm = document.getElementById("login-form");
@@ -54,16 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 const userCredential = await createUserWithEmailAndPassword(auth, email, password);
                 const user = userCredential.user;
 
-                // 📩 Enviar correo de verificación de Firebase
                 await sendEmailVerification(user);
 
-                // 🔢 Generar código de verificación
                 const codigoVerificacion = Math.floor(100000 + Math.random() * 900000);
 
-                // 📝 Guardar datos en Firestore
                 await setDoc(doc(db, "usuarios", user.uid), {
                     nombre, email, telefono, pregunta, respuesta,
-                    bloqueado: false, verificado: false, codigoVerificacion
+                    bloqueado: true, verificado: false, codigoVerificacion
                 });
 
                 console.log("✅ Usuario creado con UID:", user.uid);
@@ -95,12 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const userData = userDoc.data();
 
+                await updateDoc(userRef, { bloqueado: true });
+
                 if (userData.bloqueado) {
                     showMessage("Tu cuenta está bloqueada. Debes desbloquearla antes de continuar.", "error");
                     return;
                 }
-
-                // 📩 Generar y enviar nuevo código de verificación SIEMPRE
                 await generarCodigo(user.uid, email);
 
                 if (!user.emailVerified) {
@@ -123,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// 🔒 Bloquear cuenta
+
 async function bloquearCuenta(uid) {
     try {
         await updateDoc(doc(db, "usuarios", uid), { bloqueado: true });
@@ -132,7 +126,6 @@ async function bloquearCuenta(uid) {
     }
 }
 
-// ❌ Manejo de errores
 function manejarErrores(error) {
     const errores = {
         "auth/email-already-in-use": "El correo ya está en uso.",
@@ -143,53 +136,22 @@ function manejarErrores(error) {
     return errores[error.code] || "Ocurrió un error. Inténtalo de nuevo.";
 }
 
-// 🔄 Alternar formularios de login y registro
+
 document.addEventListener("DOMContentLoaded", function () {
     const toggleForms = () => {
         document.getElementById('register-section').classList.toggle('d-none');
         document.getElementById('login-section').classList.toggle('d-none');
     };
 
-    // 📌 Validación de correo en el registro
-    const validarCorreo = () => {
+    document.getElementById("register-form").addEventListener("submit", function(event) {
         const email = document.getElementById("register-email").value;
         const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     
         if (!regex.test(email)) {
             alert("Por favor, ingrese un correo válido.");
-            return false;
-        }
-    };
-
-    document.getElementById("register-form").addEventListener("submit", function(event) {
-        if (!validarCorreo()) {
             event.preventDefault();
         }
-    });
-
-    document.getElementById("login-form").addEventListener("submit", function(event) {
-        const email = document.getElementById("email").value;
-        if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-            alert("Por favor, ingrese un correo válido.");
-            event.preventDefault();
-        }
-    });
-
-    document.querySelectorAll(".toggle-password").forEach(toggle => {
-        toggle.addEventListener("click", function () {
-            let passwordInput = this.parentElement.nextElementSibling;
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                this.classList.remove("bi-eye-slash");
-                this.classList.add("bi-eye");
-            } else {
-                passwordInput.type = "password";
-                this.classList.remove("bi-eye");
-                this.classList.add("bi-eye-slash");
-            }
-        });
     });
 
     window.toggleForms = toggleForms;
 });
-

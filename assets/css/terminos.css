@@ -6,13 +6,85 @@
     box-sizing: border-box;
 }
 
+@import url('fonts.css');
+/* REVISEN LO QUE NOS MANDO YAPE PARA EL DISEÑO Y EL LOGO */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* NAVBAR */
+header {
+
+    padding: 5px;
+}
+
+.container-fluid {
+    background: linear-gradient(to right, rgb(181, 94, 190), rgb(62, 255, 226)), aqua;
+}
+
+
+nav.navbar.bg-body-tertiary.fixed-top.menu-2 {
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    height: 100px;
+    margin-left: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.menu1-ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 80px;
+}
+ 
+a.nav-link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+a.nav-link:hover{
+    color: rgb(219, 185, 231);
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.menu-1{
+    height: 105px;
+}
+
+.menu-2{
+    display: none;
+    visibility: hidden;
+}
+
+
 .tyc{
+    margin-top: 9px;
     font-family: 'Roboto Bold' , sans-serif;
     width: 100%;
-    background: linear-gradient(135deg, #742384, #5c3086, #430d75 );
-    color: white;
-    padding: 20px;
+    padding-left: 50px;
     font-weight: bold;
+}
+.sub{
+    padding-left: 50px;
 }
 
 .contn{
@@ -21,11 +93,12 @@
 }
 
 .sub{
-    font-family: 'Roboto Light' , sans-serif;
+    font-family: 'Roboto Black' , sans-serif;
     color: #000000;
     font-size: 18px;
-    font-weight: 300;
-    margin: 10px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 img{
@@ -82,24 +155,40 @@ h3{
     margin-top: -55px;
 }
 
-.btn-aceptar{
-    font-family: 'Roboto Bold' , sans-serif;
+
+
+.btn-aceptar {
+    font-family: 'Roboto Bold', sans-serif;
+    background: linear-gradient(135deg, #15D6BE, #00AD97);
     padding: 23px 55px;
-    background: #15D6BE;
     font-weight: bold;
     color: white;
     border: none;
     border-radius: 7px;
     cursor: pointer;
     font-size: 16px;
+    transition: background 0.3s ease, opacity 0.3s ease-in-out;
 }
 
-.btn-aceptar:hover{
-    background: #00AD97;
+
+.btn-aceptar:disabled {
+    opacity: 0.5;  
+    cursor: not-allowed;  
+    pointer-events: none; 
+    background: linear-gradient(135deg, #b0eae1, #74c9bd);
+}
+
+.btn-aceptar.enabled {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.btn-aceptar:hover:not(:disabled) {
     background: linear-gradient(135deg, #15D6BE, #00AD97);
-    transition: background 0.3s ease;
     animation: pulse 0.5s ease-in-out;
 }
+
 
 @keyframes pulse {
     0% { transform: scale(1); }
@@ -201,29 +290,63 @@ h2{
 
 @media (max-width: 1024px) {
     .flex-child {
-        width: calc(33.33% - 15px); /* 3 tarjetas por fila */
+        width: calc(33.33% - 15px); 
+    }
+}
+
+@media (max-width: 992px) {
+    .row.row-cols-2.row-cols-md-3.row-cols-lg-5 {
+        gap: 19px !important;
+    }
+
+    .row-cols-md-3>* {
+        width: 30% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .row.row-cols-2.row-cols-md-3.row-cols-lg-5 {
+        gap: 20px !important;
+    }
+
+    .row-cols-md-3>* {
+        width: 31% !important;
     }
 }
 
 
 @media (max-width: 768px) {
-    .flex-child {
-        width: calc(50% - 15px); 
+    .row.row-cols-2.row-cols-md-3.row-cols-lg-5 {
+        gap: 22px !important;
     }
 
-    .btn-aceptar {
-        width: 80%;
+    .row-cols-md-3>* {
+        width: 48% !important;
     }
 }
 
+@media (max-width: 623px) {
+    .row.row-cols-2.row-cols-md-3.row-cols-lg-5 {
+        gap: 22px !important;
+    }
 
-@media (max-width: 480px) {
+    .row-cols-md-3>* {
+        width: 47% !important;
+    }
+}
+
+@media (max-width: 530px) {
+
+    .row-cols-md-3>* {
+        width: 45% !important;
+    }
+
     .flex {
         justify-content: center;
     }
 
     .flex-child {
-        width: 100%; /* 1 tarjeta por fila */
+        width: 100%; 
         margin-right: 0;
     }
 
@@ -231,5 +354,12 @@ h2{
         width: 90%;
         font-size: 14px;
         padding: 12px 20px;
+    }
+}
+
+@media (max-width: 645px){
+    .row-cols-md-3>* {
+        width: 90% !important;
+        margin: 0 auto;
     }
 }

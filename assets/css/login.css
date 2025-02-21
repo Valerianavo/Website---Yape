@@ -1,0 +1,152 @@
+@import url('fonts.css');
+html, body {
+    overflow-x: hidden; 
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(/assets/img/speed-line-003-1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 900;
+}
+
+h2 {
+    font-weight: 800;
+}
+
+/* Estilos del botón primario */
+.btn-pri {
+    background-color: rgb(70, 214, 197) !important;
+    color: white !important;
+    border: 2px solid rgb(210, 241, 236);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    max-width: 700px !important; 
+    width: 80%; 
+}
+
+.btn-pri:hover,
+.btn-pri:focus,
+.btn-pri:active {
+    background-color: #36cebc !important;
+    color: white !important;
+    border-color: #74ffec !important;
+}
+
+/* Botón morado de iniciar sesión */
+.btn-purple {
+    background-color: #9145c7;
+    color: white;
+    font-weight: bold;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+
+.btn-purple:hover {
+    background-color: #7d3bb1;
+}
+
+/* Inputs */
+.form-control {
+    border: 2px solid #ddd;
+    padding: 10px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.container{
+    width: 80%;
+    max-width: 800px;
+    border-radius: 30px;
+    padding: 18px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.desbloqueo-img {
+    max-width: 100%;
+    width: 100% !important;
+    height: auto;
+    display: block;
+    animation: float 3s ease-in-out infinite;
+}
+
+
+.form-control:focus {
+    border-color: #9145c7;
+    box-shadow: 0 0 5px rgba(145, 69, 199, 0.5);
+}
+
+
+
+#verificacion {
+    display: none;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#verificacion label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#verificacion input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: border 0.3s ease;
+}
+
+#verificacion input:focus {
+    border-color: #bf00ea;
+    outline: none;
+}
+
+#verificar-codigo {
+    background: #b300ea;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+#verificar-codigo:hover {
+    background: #4500b5;
+}
+
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        margin-top: 50px;
+    }
+
+}

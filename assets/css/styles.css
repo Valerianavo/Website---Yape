@@ -1,7 +1,6 @@
 @import url('fonts.css');
 /* REVISEN LO QUE NOS MANDO YAPE PARA EL DISEÑO Y EL LOGO */
 body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -13,8 +12,16 @@ header {
     padding: 5px;
 }
 
+.container-fluid {
+    background: linear-gradient(to right, rgb(181, 94, 190), rgb(62, 255, 226)), aqua;
+}
+
+
+nav.navbar.bg-body-tertiary.fixed-top.menu-2 {
+    padding: 0;
+}
+
 nav {
-    background-color: #802F89;
     display: flex;
     align-items: center;
     height: 100px;
@@ -142,7 +149,7 @@ a.nav-link:hover{
 
 @keyframes floatStars {
     0% { transform: translateY(0) scale(1); opacity: 0.8; }
-    100% { transform: translateY(-12px) scale(1.1); opacity: 1; }
+    100% { transform: translateY(-12px) scale(1.2); opacity: 1; }
 }
 
 
@@ -152,9 +159,6 @@ a.nav-link:hover{
     font-size: 35px;
     margin-bottom: 45px;
 }
-
-
-
 
 
 section.seguridad.container{
@@ -204,6 +208,19 @@ section.seguridad.container{
     top: 100%;
     left: 100%;
 }
+
+.card-img-top {
+    width: 90%;
+    border-radius: 10px;
+    height: 190px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
 
 
 .imagen1{
@@ -265,6 +282,10 @@ section.seguridad.container{
     visibility: visible;
     opacity: 1;
 }
+
+
+
+
 footer {
     background-color: #212121;
     color: white;
@@ -281,8 +302,16 @@ footer {
     .menu-2{
         visibility: visible;
     }
-    .menu-1{
+    .menu-1, .hero-image{
         display: none;
+    }
+    .hero{
+        max-width: 1400px;
+        width: 100%;
+        margin: 50px 30px 0px 30px;
+    }
+    section.hero-content.mb-4 {
+        margin-top: 85px;
     }
 }
 

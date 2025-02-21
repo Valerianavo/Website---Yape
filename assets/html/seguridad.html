@@ -12,26 +12,59 @@
 </head>
 <body>
     <header>
-            <nav class="navbar navbar-expand-lg">
-                <div class="container">
-                    <a class="navbar-brand" href="#">
-                        <img class="logo" src="../img/Yape_Blanco_Verde.png" alt="Logo Yape">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link active" href="../../index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="seguridad.html">Seguridad</a></li>
-                            <li class="nav-item"><a class="nav-link" href="soporte.html">Soporte</a></li>
-                            <li class="nav-item"><a class="nav-link" href="register.html">Registro</a></li>
-                            <li class="nav-item"><a class="nav-link" href="login.html">Iniciar sesión</a></li>
+        <div class="menu-1">
+            <nav class="navbar fixed-top navbar-expand-lg" >
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img class="logo" src="..//img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="menu1-ul">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="seguridad.html">Seguridad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="soporte.html">Soporte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../html/desbloqueo.html">Desbloquear cuenta</a>
+                            </li>
+                            
                         </ul>
                     </div>
                 </div>
             </nav>
-        
+        </div>
+        <!--Nav Responsive-->
+        <nav class="navbar bg-body-tertiary fixed-top menu-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logo" src="assets/img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="seguridad.html">Seguridad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="oporte.html">Soporte</a>
+                            </li>
+                        </ul>
+                        <!-- <button id="btn-cerrar-sesion" style="display: none;">Cerrar sesión</button> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -72,21 +105,60 @@
             </div>
 
             
-                <section>
-                    <div class="titulo-container">
-                        <h2 class="my-4">¿Qué hacer si <span class="text-verde">pierdes</span> tu <span class="text-verde">celular</span> o sospechas de un <span class="text-verde">robo</span>?</h2>
+            <section>
+                <div class="titulo-container">
+                    <h2 class="my-4">¿Qué hacer si <span class="text-verde">pierdes</span> tu <span class="text-verde">celular</span> o sospechas de un <span class="text-verde">robo</span>?</h2>
+                </div>
+            
+                <div class="video-text-container">
+                    <!-- Contenedor del carrusel de videos -->
+                    <div class="video-container">
+                        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <iframe src="https://www.youtube.com/embed/Bmq_XrxxYyQ" title="YAPE I ¿Cómo reconocer una estafa para no caer en una?" 
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                                    picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                                <div class="carousel-item">
+                                    <iframe src="https://www.youtube.com/embed/dD2CA1FCBYk" title="¡No te confíes! 🔐" 
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                                    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>     
+                                </div>
+                                <div class="carousel-item"> 
+                                    <iframe src="https://www.youtube.com/embed/Bmq_XrxxYyQ" title="YAPE I ¿Cómo reconocer una estafa para no caer en una?" 
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+                                </div>
+                                <div class="carousel-item">
+                                    <iframe src="https://www.youtube.com/embed/O9_ZZtFqq5w" title="¡Cuídate de los sapos 🐸!" 
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="info-section">
+            
+                    <!-- Contenedor del texto -->
+                    <div class="text-container">
                         <p>Si tu celular ha sido robado o lo has perdido, es crucial que tomes acción de inmediato para proteger tu cuenta. Sigue estos pasos:</p>
                         <ul>
                             <li><strong> Bloquea tu cuenta:</strong> Inicia sesión y bloquea tu cuenta a través de la página de Yape.</li>
-                            <li><strong> Cambia tu contraseña:</strong> Asegúrate de cambiar la contraseña de tu cuenta Yape para evitar accesos no autorizados.</li>
                             <li><strong> Contacta con el soporte:</strong> Si no puedes acceder a tu cuenta, contacta con el soporte de Yape para recibir asistencia adicional.</li>
                             <li><strong> Reporta el robo:</strong> Informa a las autoridades locales sobre el robo de tu dispositivo.</li>
                         </ul>
                     </div>
-                </section>
-                
+                </div>
+            </section>
+            
               
                 <section>
                     <div class="titulo-container">
@@ -106,11 +178,37 @@
         </section>
     </main>
 
-    <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p>© 2025 Yape. Todos los derechos reservados.</p>
-            <p><a href="#">Política de privacidad</a> | <a href="#">Términos y condiciones</a></p>
+    <footer style="background-color: #6d1b7b; color: white; padding: 20px; text-align: center; font-family: Arial, sans-serif;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div>
+                <img src="../img/Yape_Blanco.png" alt="Yape" style="height: 40px;">
+                <p>Síguenos en:</p>
+                <a href="#"><i class="bi bi-instagram" style="font-size: 30px; color: white;"></i></a>
+                <a href="#"><i class="bi bi-tiktok" style="font-size: 30px; color: white;"></i></a>
+                <a href="#"><i class="bi bi-facebook" style="font-size: 30px; color: white;"></i></a>
+                <a href="#"><i class="bi bi-linkedin" style="font-size: 30px; color: white;"></i></a>
+                <a href="#"><i class="bi bi-youtube" style="font-size: 30px; color: white;"></i></a>
+            </div>
+            <div>
+                <p><a href="#" style="color: white; text-decoration: none;">Términos y Condiciones</a></p>
+                <p><a href="poli-privacidad.html" style="color: white; text-decoration: none;">Política de privacidad y Datos personales</a></p>
+                <p><a href="#" style="color: white; text-decoration: none;">Política de Cookies</a></p>
+                <p><a href="#" style="color: white; text-decoration: none;">Consentimiento para el uso de cookies</a></p>
+            </div>
+            <div>
+                <i class="bi bi-book" style="font-size: 40px; color: white;"></i>
+                <p>Libro de Reclamaciones</p>
+            </div>
+            <div>
+                <button style="background-color: #9152a7; color: white; border: none; padding: 10px; margin: 5px; cursor: pointer;">
+                    <i class="bi bi-whatsapp"></i> Escríbenos por WhatsApp
+                </button>
+                <button style="background-color: #9152a7; color: white; border: none; padding: 10px; margin: 5px; cursor: pointer;">
+                    <i class="bi bi-briefcase"></i> Trabaja con nosotros
+                </button>
+            </div>
         </div>
+        <p style="margin-top: 20px; font-size: 12px;">Yape © 2025. Todos los derechos reservados</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
