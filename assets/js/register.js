@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const userCredential = await createUserWithEmailAndPassword(auth, email, password);
                 const user = userCredential.user;
 
-                await sendEmailVerification(user);
+                // await sendEmailVerification(user);
 
                 const codigoVerificacion = Math.floor(100000 + Math.random() * 900000);
 
