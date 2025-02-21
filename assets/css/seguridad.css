@@ -2,20 +2,33 @@ header {
 
     padding: 5px;
 }
-
-nav {
-    background-color: #802F89;
-    display: flex;
-    align-items: center;
-    height: 100px;
+@import url('fonts.css');
+/* REVISEN LO QUE NOS MANDO YAPE PARA EL DISEÑO Y EL LOGO */
+body {
+    margin: 0;
+    padding: 0;
 }
+
+
+/* NAVBAR */
+header {
+
+    padding: 5px;
+}
+
 .container-fluid {
     background: linear-gradient(to right, rgb(181, 94, 190), rgb(62, 255, 226)), aqua;
 }
 
 
-nav.navbar.bg-body-tertiary.fixed-top.menu-2 {
+nav.navbar.fixed-top.navbar-expand-lg {
     padding: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
 }
 
 .logo {
@@ -57,6 +70,7 @@ a.nav-link:hover{
     display: none;
     visibility: hidden;
 }
+
 
 
 
