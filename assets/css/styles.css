@@ -5,26 +5,36 @@ body {
     margin: 0;
     padding: 0;
 }
+
+
+/* NAVBAR */
 header {
-    background-color: #802F89;
+
     padding: 5px;
 }
 
 nav {
+    background-color: #802F89;
     display: flex;
     align-items: center;
+    height: 100px;
 }
-.logo{
-    height: 110px;
+
+.logo {
+    height: 100px;
+    margin-left: 20px;
+    transition: transform 0.4s ease-in-out;
 }
-ul {
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.menu1-ul {
+    margin: 0;
     list-style: none;
     display: flex;
     gap: 80px;
-    padding-top: 10px;
-}
-ul li {
-    margin: 0 15px;
 }
  
 a.nav-link{
@@ -33,6 +43,25 @@ a.nav-link{
     font-weight: bold;
     line-height: 60px;
 }
+
+a.nav-link:hover{
+    color: rgb(219, 185, 231);
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.menu-1{
+    height: 105px;
+}
+
+.menu-2{
+    display: none;
+    visibility: hidden;
+}
+
+
+/* CONTENIDO */
 .hero {
     display: flex;
     flex-direction: column;
@@ -45,34 +74,137 @@ a.nav-link{
     color: white;
     width: 700px;
     height: 400px;
-    margin: 40px;
+    margin: 37px;
+    max-width: 60%;
     
 }
+
+
+.hero-content {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-content {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.hero-image .padlock {
+    max-width: 280px;
+    z-index: 2; 
+}
+
+.hero-image .star {
+    position: absolute;
+    width: 90px; 
+    opacity: 0.9;
+    animation: floatStars 3s infinite ease-in-out alternate;
+    z-index: 1; 
+}
+
+
+.star-1 {
+    top: -30px;
+    left: 10px;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    top: 40px;
+    right: -30px;
+    animation-delay: 0.5s;
+}
+
+.star-3 {
+    bottom: 10px;
+    left: -30px;
+    animation-delay: 1s;
+}
+
+.star-4 {
+    bottom: -40px;
+    right: 10px;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatStars {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-12px) scale(1.1); opacity: 1; }
+}
+
+
+
 
 .tyh1 {
     font-size: 35px;
     margin-bottom: 45px;
 }
 
-.tyse {
-    font-family: 'Inter', sans-serif;
-    color: #802F89;
+
+
+
+
+section.seguridad.container{
+    background-color: white;
+    border-radius: 20px;
 }
+
 .btn-bloqueo {
-    background-color: #20D0C2;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    cursor: pointer;
+    padding: 14px 28px;
+    border-radius: 12px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: linear-gradient(to bottom, #20D0C2, #18B3A8);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
     font-size: 18px;
+    border: none;
+    margin-top: 10px;
+    color: white;
+    font-family: 'Inter', sans-serif;
 }
+
+.btn-bloqueo::after {
+    content: "";
+    position: absolute;
+    top: -80%;
+    left: -100%;
+    width: 250%;
+    height: 250%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg);
+    transition: all 0.5s ease-in-out;
+}
+
 .btn-bloqueo:hover {
-    background-color: #11A89E;
-    color: #edebf3;
-    transform: translateY(-2px);
-    box-shadow: 0 3px 9px rgb(0, 0, 0, 0.3);
+    background: linear-gradient(to bottom, #11A89E, #1edfd2);
+    transform: translateY(-1px);
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
 }
+
+.btn-bloqueo:hover::after {
+    top: 100%;
+    left: 100%;
+}
+
 
 .imagen1{
     float: right;
@@ -143,7 +275,17 @@ footer {
     width: 100%;
 }
 
-/* Responsive tu terrorrrrr */
+/* RESPONSIVE NAVBAR */
+
+@media screen and (max-width: 1004px){
+    .menu-2{
+        visibility: visible;
+    }
+    .menu-1{
+        display: none;
+    }
+}
+
 @media screen and (max-width: 890px){
     .nav-links a{
         font-size: 14px;
@@ -155,3 +297,4 @@ footer {
         font-size: 10px;
     }
 }
+

@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Términos y Condiciones</title>
     <link rel="stylesheet" href="../css/terminos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <!--Toastify JS-->
     <link
       rel="stylesheet"
@@ -13,19 +16,18 @@
     />
 </head>
 <body>
-    <header id="header-t" class="tyc">
-        <h1>Términos y Condiciones</h1>
+        <h1 class="tyc">Términos y Condiciones</h1>
          <!-- Primer main (se ocultará después de que se haga clic en el botón) -->
     <main id="main-aceptar-terminos">
-        <p class="sub">Hemos enviado un correo de confirmación. Para continuar, acepta los términos.</p>  
+        <p class="sub">Hemos enviado un correo de confirmación. Para continuar, acepta los siguientes terminos:</p>  
     </main>
     </header>
-    <section id="continuar" class="container">
+    <section id="continuar" class="contn">
         <div class="blog">
             <div class="flex">
                 <div class="flex-child">
                     <div class="post">
-                        <img src="../img/Suspensión_Temporal.jpg" alt="">
+                        <img src="../img/Suspensión Temporal.jpg" alt="">
                         <div class="info">
                             <h3>Suspensión temporal:</h3>
                             <p class="descrip">Tu número quedará inactivo y no podrás realizar ni recibir pagos.</p>
@@ -52,7 +54,7 @@
                 </div>
                 <div class="flex-child">
                     <div class="post">
-                        <img src="assets/img/Verificación obligatoria.jpg" alt="">
+                        <img src="../img/Verificación obligatoria.jpg" alt="">
                         <div class="info">
                             <h3>Verificación obligatoria</h3>
                             <p class="descrip">Para recuperar tu cuenta, deberás seguir el proceso de autenticación.</p>
@@ -61,7 +63,7 @@
                 </div>
                 <div class="flex-child">
                     <div class="post">
-                        <img src="assets/img/Confirmación de correo.jpg" alt="">
+                        <img src="../img/Confirmación de correo.jpg" alt="">
                         <div class="info">
                             <h3>Confirmación por correo:</h3>
                             <p class="descrip">Se enviará un correo de confirmación a <strong id="correoUsuario"></strong> con más detalles.</p>
@@ -77,21 +79,33 @@
 
     <!-- Sección de validación -->
     <section id="validacion" class="container" style="display: none;">
-        <header>
+        <header class="hea-ex">
             <h2>Validando tu información...</h2>
         </header>
-        <p>Por favor, espera unos segundos mientras procesamos tu solicitud.</p>
+        <p class="parr-ex">Por favor, espera unos segundos mientras procesamos tu solicitud.</p>
     </section>
 
     <!-- Sección de éxito -->
     <section id="exito" class="container" style="display: none;">
+        <div class="confeti-container">
+            <div class="confeti"></div>
+            <div class="confeti"></div>
+            <div class="confeti"></div>
+            <div class="confeti"></div>
+            <div class="confeti"></div>
+            <div class="confeti"></div>
+            <div class="confeti"></div>
+            <div class="confeti"></div>
+            <div class="confeti"></div>
+            <div class="confeti"></div>
+        </div>
         <header class="hea-ex">
             <h2>✅ ¡Cuenta bloqueada con éxito!</h2>
         </header>
         <div class="cont-ex">
-            <p class="parr-ex">Un correo de confirmación ha sido enviado a <strong id="correoConfirmacion"></strong> con instrucciones para desbloquear tu cuenta.</p>
+            <p class="parr-ex">Te hemos enviado un correo de confirmación a <strong id="correoConfirmacion"></strong> con los pasos detallados para desbloquear tu cuenta.</p>
             <button class="btn-volex">
-                <a href="desbloqueo.html">Volver al inicio</a>
+                <a href="../../index.html">Volver al inicio</a>
             </button>
         </div>
     </section>
@@ -125,15 +139,12 @@
             }, 3000);  
         });
     </script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
-
+    <script type="module" src="../js/index.js"></script>
      <!--Toastify CDN-->
      <script
      type="text/javascript"
      src="https://cdn.jsdelivr.net/npm/toastify-js"
    ></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
 

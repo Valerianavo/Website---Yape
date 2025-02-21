@@ -9,23 +9,23 @@
 .tyc{
     font-family: 'Roboto Bold' , sans-serif;
     width: 100%;
-    height: 200px;
-    background: linear-gradient(135deg, #742384, #653C8B);
+    background: linear-gradient(135deg, #742384, #5c3086, #430d75 );
     color: white;
-    padding: 50px 15px;
+    padding: 20px;
     font-weight: bold;
 }
 
 .contn{
+    margin-top: -30px;
     text-align: center;
 }
 
 .sub{
     font-family: 'Roboto Light' , sans-serif;
-    color: #D0BCD8;
-    font-size: 14px;
+    color: #000000;
+    font-size: 18px;
     font-weight: 300;
-    margin-top: 5px;
+    margin: 10px;
 }
 
 img{
@@ -34,8 +34,7 @@ img{
 }
 
 .blog{
-    padding: 40px 30px;
-   
+    padding: 35px 5vw;
 }
 
 .blog h1 {
@@ -46,25 +45,26 @@ img{
 }
 
 .flex{
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .flex-child{
-    width: 320px;
+    width: calc(20% - 15px);
+    max-width: 350px;
+    margin-right: 10px;
+    margin-bottom: 30px;
     padding: 0 10px;
-    margin-right: 20px;
-    margin-bottom: 20px;
     border-radius: 3px;
     box-shadow: 1px 1px 1px 2px rgb(0, 0, 0, 0.1);
 }
 
 h3{
     font-family: 'Roboto Medium' , sans-serif;
-    font-size: medium;
+    font-size: 15px;
 }
 
 .descrip{
@@ -79,12 +79,12 @@ h3{
 .contenedor-btnacep{
     display: flex;
     justify-content: center;
-    margin-top: -40px;
+    margin-top: -55px;
 }
 
 .btn-aceptar{
     font-family: 'Roboto Bold' , sans-serif;
-    padding: 10px 20px;
+    padding: 23px 55px;
     background: #15D6BE;
     font-weight: bold;
     color: white;
@@ -96,7 +96,18 @@ h3{
 
 .btn-aceptar:hover{
     background: #00AD97;
+    background: linear-gradient(135deg, #15D6BE, #00AD97);
+    transition: background 0.3s ease;
+    animation: pulse 0.5s ease-in-out;
 }
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+
 
 .container{
     display: flex;
@@ -113,14 +124,18 @@ h3{
     color: #742384;
 }
 
-.parr-ex{
-    margin: 30px;
+h2{
+    font-family: 'Roboto Bold' , sans-serif;
+}
 
+.parr-ex{
+    font-family: 'Roboto Light';
+    margin: 30px;
 }
 
 .btn-volex{
     display: inline-block;
-    padding: 10px 20px;
+    padding: 20px 40px;
     text-decoration: none;
     color: white;
     background-color: #10CBB4;
@@ -181,298 +196,40 @@ h3{
 .confeti:nth-child(9) { left: 90%; background-color: #8C33FF; animation-duration: 3s; }
 .confeti:nth-child(10) { left: 95%; background-color: #33FF8C; animation-duration: 3.3s; }
 
-/* Estilos generales para pantallas grandes (escritorio) */
-@media (min-width: 1025px) {
-    .navbar-nav { display: flex; justify-content: space-between; }
-    .img-centrada { max-width: 50%; display: block; margin: auto; }
-}
 
-/* Tablets y pantallas medianas */
+/*RESPONSIVIDAD*/
+
 @media (max-width: 1024px) {
-    .navbar-nav { flex-direction: column; align-items: center; }
-    .navbar-brand img.logo { width: 150px; }
-    .img-centrada { max-width: 70%; }
-    main p { text-align: center; font-size: 1.2rem; }
-    #btn-desbloquear { width: 80%; margin: auto; display: block; }
-}
-
-/* Móviles y pantallas pequeñas */
-@media (max-width: 768px) {
-    .navbar-toggler { display: block; }
-    .navbar-collapse { text-align: center; }
-    .navbar-nav { width: 100%; }
-    .navbar-nav .nav-item { margin-bottom: 10px; }
-    .img-centrada { max-width: 90%; }
-    main p { font-size: 1rem; }
-    #btn-desbloquear { width: 100%; font-size: 1rem; padding: 10px; }
-}
-
-/* Pantallas extra pequeñas */
-@media (max-width: 480px) {
-    .navbar-nav { flex-direction: column; }
-    .navbar-brand img.logo { width: 120px; }
-    .img-centrada { max-width: 100%; }
-    main p { font-size: 0.9rem; padding: 0 10px; }
-    #btn-desbloquear { font-size: 0.9rem; padding: 8px; }
-}
-
-/* Estilos generales */
-body {
-    font-size: 16px;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Imagen responsiva */
-.img-centrada {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-
-/* Navbar responsivo */
-.navbar {
-    flex-wrap: wrap;
-}
-.navbar-brand img {
-    max-width: 150px;
-    height: auto;
-}
-
-@media (max-width: 992px) {
-    .navbar-nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    .navbar-nav .nav-item {
-        margin: 5px 0;
-    }
-    .container {
-        padding: 15px;
+    .flex-child {
+        width: calc(33.33% - 15px); /* 3 tarjetas por fila */
     }
 }
+
 
 @media (max-width: 768px) {
-    h2 {
-        font-size: 1.5rem;
+    .flex-child {
+        width: calc(50% - 15px); 
     }
-    p {
-        font-size: 1rem;
-    }
-    #btn-desbloquear, .btn {
-        width: 100%;
-        padding: 10px;
-        font-size: 1rem;
-    }
-    .card {
-        padding: 15px;
-    }
-    .form-control {
-        font-size: 1rem;
+
+    .btn-aceptar {
+        width: 80%;
     }
 }
+
 
 @media (max-width: 480px) {
-    .navbar-brand img {
-        max-width: 120px;
+    .flex {
+        justify-content: center;
     }
-    .navbar-toggler {
-        font-size: 1.2rem;
-    }
-    .form-control {
-        width: 100%;
-        font-size: 0.9rem;
-    }
-    .input-group-text {
-        font-size: 0.9rem;
-    }
-}
 
-/* Estilos generales */
-body {
-    font-size: 16px;
-    text-align: center;
-    padding: 20px;
-}
+    .flex-child {
+        width: 100%; /* 1 tarjeta por fila */
+        margin-right: 0;
+    }
 
-/* Imagen responsiva */
-.img-centrada {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-
-/* Navbar responsivo */
-.navbar {
-    flex-wrap: wrap;
-}
-.navbar-brand img {
-    max-width: 150px;
-    height: auto;
-}
-
-@media (max-width: 992px) {
-    .navbar-nav {
-        flex-direction: column;
-        text-align: center;
-    }
-    .navbar-nav .nav-item {
-        margin: 5px 0;
-    }
-}
-
-@media (max-width: 768px) {
-    h2 {
-        font-size: 1.5rem;
-    }
-    p {
-        font-size: 1rem;
-    }
-    #btn-desbloquear {
-        width: 100%;
-        padding: 10px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar-brand img {
-        max-width: 120px;
-    }
-    .navbar-toggler {
-        font-size: 1.2rem;
-    }
-    .form-control {
-        width: 100%;
-    }
-}
-
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* Media queries para hacerlo responsivo */
-
-/* Para pantallas pequeñas (hasta 576px) */
-@media (max-width: 576px) {
-    .container {
-        padding: 10px;
-    }
-    h1 {
-        font-size: 1.5rem;
-    }
-    h2, h4 {
-        font-size: 1.2rem;
-    }
-    p {
-        font-size: 1rem;
-    }
-}
-
-/* Para pantallas medianas (hasta 768px) */
-@media (max-width: 768px) {
-    .col-md-8 {
-        width: 100%;
-    }
-    .text-center {
-        text-align: center;
-    }
-}
-
-/* Para pantallas grandes (hasta 992px) */
-@media (max-width: 992px) {
-    .container {
-        max-width: 90%;
-    }
-}
-
-/* Para pantallas extra grandes (más de 1200px) */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 70%;
-    }
-}
-
-/* Media Queries para hacer el formulario responsivo */
-
-/* Pantallas pequeñas (hasta 576px) */
-@media (max-width: 576px) {
-    .container {
-        padding: 10px;
-    }
-    .card {
-        width: 100%;
-        padding: 15px;
-    }
-    .input-group-text {
+    .btn-aceptar {
+        width: 90%;
         font-size: 14px;
-    }
-}
-
-/* Pantallas medianas (hasta 768px) */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-    .card {
-        max-width: 90%;
-    }
-    h1, h2 {
-        font-size: 1.5rem;
-    }
-}
-
-/* Pantallas grandes (hasta 992px) */
-@media (max-width: 992px) {
-    .container {
-        padding: 30px;
-    }
-    .card {
-        max-width: 70%;
-    }
-}
-
-/* Media query para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-    /* Ajuste del navbar */
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .navbar-toggler {
-        margin-left: auto;
-    }
-
-    .navbar-brand img {
-        width: 100px; /* Reducir el logo en móviles */
-    }
-
-    /* Ajuste del contenedor principal */
-    .container {
-        padding: 10px;
-    }
-
-    /* Estilos para el formulario */
-    form {
-        width: 100%;
-    }
-
-    /* Ajuste de los títulos */
-    h1, h2 {
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
-    h5 {
-        font-size: 1.2rem;
-    }
-
-    /* Ajuste del footer */
-    footer {
-        font-size: 0.9rem;
-        padding: 15px;
+        padding: 12px 20px;
     }
 }

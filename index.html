@@ -17,115 +17,119 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <script src="https://kit.fontawesome.com/988110bf96.js" crossorigin="anonymous"></script>
-    <script type="module" src="assets/js/search.js"></script>
 </head>
 <body>
     <header>
-        <div class="menu-2">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img class="logo" src="assets/img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav nav-links">
-                        <li class="nav-item"><a class="nav-link" href="assets/html/seguridad.html">🔒Seguridad</a></li>
-                        <li class="nav-item"><a class="nav-link" href="assets/html/soporte.html">📁Soporte</a></li>
-                        <li class="nav-item"><a class="nav-link" href="assets/html/login.html">Iniciar sesión</a></li>
-                        <li class="nav-item"><a class="nav-link" href="assets/html/register.html">📝Registro</a></li>
-                        <form class="d-flex" role="search">
-                            <input class="form-control " type="search" aria-label="Search">
-                            <button class="btn btn-outline-light" type="submit" id="searchInput">
-                                <i class="bi bi-search"></i>
-                            </button>
-                        </form>
-                    </ul>
+        <div class="menu-1">
+            <nav class="navbar fixed-top navbar-expand-lg" >
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img class="logo" src="assets/img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="menu1-ul">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="assets/html/desbloqueo.html">desbloqueo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="assets/html/seguridad.html">Seguridad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="assets/html/soporte.html">Soporte</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <button id="btn-cerrar-sesion" style="display: none;">Cerrar sesión</button>
+                            </li> -->
+                            
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
         <!--Nav Responsive-->
-        <div class="menu-">
-            <nav class="navbar fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Offcanvas navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown
-                        </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                    </li>
-                  </ul>
-                <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+        <nav class="navbar bg-body-tertiary fixed-top menu-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logo" src="assets/img/Yape_Blanco_Verde.png" alt="Logo Yape"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="assets/html/seguridad.html">Seguridad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="assets/html/soporte.html">Soporte</a>
+                            </li>
+                        </ul>
+                        <!-- <button id="btn-cerrar-sesion" style="display: none;">Cerrar sesión</button> -->
+                    </div>
                 </div>
-              </div>
             </div>
-          </nav>
-        </div>
+        </nav>
     </header>
     
     
     
-    <section class="hero">
-        <h1>¿Perdiste tu celular? <b>Bloquea</b> tu <b>cuenta</b> de Yape <b>rápidamente</b></h1>
-        <button id="btn-bloqueo" class="btn-bloqueo">⚠️ Bloquear Cuenta</button>
-    </section>
-    <ul id="results">
-        <li>Elemento 1</li>
-        <li>Elemento 2</li>
-        <li>Elemento 3</li>
-        <li>Elemento 4</li>
-        <li>Elemento 5</li>
-      </ul>
-    <section class="seguridad">
-        <h1 class="tyse">Seguridad de Cuentas</h1>
-        <p>Protege tu cuenta en simples pasos</p>
-        <div class="tarjetas">
-            <div class="tarjeta">
-                <h3>Paso 1</h3>
-                <p>Inicia sesión con validación de identidad</p>
-                <img class="tarimg" src="https://img.freepik.com/vector-gratis/fondo-lavanda-digital-realista_23-2150595000.jpg?t=st=1739656241~exp=1739659841~hmac=fbea50fc8063ce57f979401e90c25ec86a1d3e7f6358a954a9f10953073f254f&w=826" alt="">
-            </div>
-            <div class="tarjeta">
-                <h3>Paso 2</h3>
-                <p>Confirma el bloqueo con un código enviado a tu correo o SMS.</p>
-                <img class="tarimg" src="https://img.freepik.com/vector-gratis/fondo-lavanda-digital-realista_23-2150595000.jpg?t=st=1739656241~exp=1739659841~hmac=fbea50fc8063ce57f979401e90c25ec86a1d3e7f6358a954a9f10953073f254f&w=826" alt="">
-            </div>
-            <div class="tarjeta">
-                <h3>Paso 3</h3>
-                <p>Recibe una confirmación y asegura tu cuenta.</p>
-                <img class="tarimg" src="https://img.freepik.com/vector-gratis/fondo-lavanda-digital-realista_23-2150595000.jpg?t=st=1739656241~exp=1739659841~hmac=fbea50fc8063ce57f979401e90c25ec86a1d3e7f6358a954a9f10953073f254f&w=826" alt="">
-            </div>
+    <section class="hero-content">
+        <div class="hero">
+            <h1>¿Perdiste tu celular? <b>Bloquea</b> tu <b>cuenta</b> de Yape rápidamente y mantén tu<b> dinero seguro</b></h1>
+            <button id="btn-bloqueo" class="btn-bloqueo">⚠️ Bloquear Cuenta</button>
+        </div>
+        <div class="hero-image">
+            <img src="assets/img/star-001.svg" alt="" class="star star-1">
+            <img src="assets/img/star-002.svg" alt="" class="star star-2">
+            <img src="assets/img/star-003.svg" alt="" class="star star-3">
+            <img src="assets/img/padlock.svg" alt="Candado de seguridad" class="padlock">
+            <img src="assets/img/star-002.svg" alt="" class="star star-4">
         </div>
         
-        
     </section>
-    <button id="btn-cerrar-sesion" style="display: none;">Cerrar sesión</button>
+    
+    <section class="seguridad container">
+        <h1 class="tyse">Protege tu cuenta Yape</h1>
+        <p class="mb-4">Bloquea tu cuenta al instante en caso de robo o pérdida.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow-sm p-3">
+                    <img class="card-img-top" src="https://img.freepik.com/vector-gratis/concepto-ciberseguridad-proteccion-datos-dibujado-mano_23-2149229299.jpg?w=826" alt="Inicio de sesión seguro">
+                    <div class="card-body">
+                        <h5 class="card-title">1. Inicia sesión</h5>
+                        <p class="card-text">Accede con tu número de celular y contraseña para validar tu identidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm p-3">
+                    <img class="card-img-top" src="https://img.freepik.com/vector-gratis/concepto-proteccion-datos-privacidad_52683-51667.jpg?w=826" alt="Confirmación de seguridad">
+                    <div class="card-body">
+                        <h5 class="card-title">2. Confirma el bloqueo</h5>
+                        <p class="card-text">Recibirás un código de seguridad en tu correo para confirmar el bloqueo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-sm p-3">
+                    <img class="card-img-top" src="https://img.freepik.com/vector-gratis/concepto-seguridad-digital-linea-plana_23-2149241353.jpg?w=826" alt="Cuenta bloqueada con éxito">
+                    <div class="card-body">
+                        <h5 class="card-title">3. Cuenta protegida</h5>
+                        <p class="card-text">Recibirás una notificación confirmando el bloqueo. Luego, sigue las indicaciones para recuperar tu cuenta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
 
     <footer style="background-color: #6d1b7b; color: white; padding: 20px; text-align: center; font-family: Arial, sans-serif;">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
@@ -164,6 +168,5 @@
 
 
     <script type="module" src="assets/js/index.js"></script>
-    <script type="module" src="assets/js/signOut.js"></script>
 </body>
 </html>

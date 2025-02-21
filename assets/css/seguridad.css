@@ -1,0 +1,78 @@
+.navbar{
+    background-color: #7D2686;
+    padding: 5px 0;
+}
+
+.logo {
+    height: 90px; 
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000000 
+}
+
+.navbar-nav {
+    gap: 110px;
+}
+
+.mb-1{
+    margin-top: -40px;
+}
+
+.text-fucsia{
+    color: #7D2686;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.titulo-container {
+    background: #7D2686;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-verde {
+    color: #10CBB4;
+}
+
+.info-section {
+    background: #f7f7f8; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.info-section ul {
+    padding-left: 20px;
+}
+
+.info-section li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-section strong {
+    color: #d32f2f;
+}
+

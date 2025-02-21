@@ -1,0 +1,113 @@
+html, body {
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(/assets/img/speed-line-003-1.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: 900;
+}
+
+h2 {
+    font-weight: 900;
+}
+
+.btn-pri {
+    background-color: rgb(70, 214, 197) !important;
+    color: white !important;
+    border: 2px solid rgb(210, 241, 236);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-pri:hover,
+.btn-pri:focus,
+.btn-pri:active {
+    background-color: #36cebc !important;
+    color: white !important;
+    border-color: #74ffec !important;
+}
+
+a.btn.btn-pri.align-items-center.gap-3.rounded-pill {
+    width: 1000px;
+    font-weight: 900;
+}
+
+section#register-section {
+    border-radius: 30px;
+    max-width: 1100px;
+    width: 90%;
+    padding: 20px;
+}
+
+/* Botón de registro */
+button.btn.btn-purple.btn-lg {
+    background-color: #9145c7;
+    color: white;
+    font-weight: bold;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+}
+
+button.btn.btn-purple.btn-lg:hover {
+    background-color: #7d3bb1;
+}
+
+/* Animación para la imagen */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.register-image img {
+    animation: float 2s ease-in-out infinite;
+    max-width: 100%;
+    height: auto;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    #register-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    #register-section {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .register-image {
+        display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .input-group-text {
+        cursor: pointer;
+    }
+
+    #register-section {
+        padding: 15px;
+    }
+
+    button.btn.btn-purple.btn-lg {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+

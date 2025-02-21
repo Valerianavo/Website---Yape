@@ -11,8 +11,8 @@ export const showMessage = (mensaje, tipo) => {
       style: {
         background:
           tipo === "error"
-            ? "linear-gradient(to right, #ff516e, #ff0027)"
-            : "linear-gradient(to right, #00b09b, #96c93d)",
+            ? "linear-gradient(to right, #b182e3, #7d2fd0)"
+            : "linear-gradient(to right, #45cea2, #289b76)",
       },
       onClick: function () {}, // Callback after click
     }).showToast();

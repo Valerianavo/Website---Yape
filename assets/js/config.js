@@ -11,13 +11,6 @@ import {
 // Firestore
 import {
   getFirestore, 
-  collection,
-  doc,
-  addDoc,
-  onSnapshot,
-  deleteDoc,
-  updateDoc,
-  getDoc,
 } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
 
 

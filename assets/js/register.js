@@ -14,11 +14,31 @@ import {
 
 import { showMessage } from "./toastMessage.js";
 
+// 📩 Inicializar EmailJS
+emailjs.init("98E6uq6a3OOJzKCjf");
+
+// 📩 Enviar código de verificación por correo
+async function enviarCodigoVerificacion(email, codigo) {
+    try {
+        await emailjs.send("Yape", "template_lp4051m", { codigo, to_email: email });
+        showMessage("Código enviado a tu correo.", "success");
+    } catch (error) {
+        showMessage("Error al enviar el correo.", "error");
+    }
+}
+
+// 🔢 Generar y actualizar código de verificación en Firestore
+async function generarCodigo(uid, email) {
+    const nuevoCodigo = Math.floor(100000 + Math.random() * 900000);
+    await updateDoc(doc(db, "usuarios", uid), { codigoVerificacion: nuevoCodigo });
+    console.log("✅ Nuevo código de verificación generado:", nuevoCodigo);
+    await enviarCodigoVerificacion(email, nuevoCodigo);
+}
+
+// 📌 Registro de usuario
 document.addEventListener("DOMContentLoaded", () => {
     const registerForm = document.getElementById("register-form");
     const loginForm = document.getElementById("login-form");
-    const params = new URLSearchParams(window.location.search);
-    const bloqueo = params.get("bloqueo") === "true"; // Detectar si el usuario viene a bloquear su cuenta
 
     if (registerForm) {
         registerForm.addEventListener("submit", async (e) => {
@@ -34,22 +54,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 const userCredential = await createUserWithEmailAndPassword(auth, email, password);
                 const user = userCredential.user;
 
+                // 📩 Enviar correo de verificación de Firebase
                 await sendEmailVerification(user);
-                console.log("Correo de verificación enviado.");
 
+                // 🔢 Generar código de verificación
+                const codigoVerificacion = Math.floor(100000 + Math.random() * 900000);
+
+                // 📝 Guardar datos en Firestore
                 await setDoc(doc(db, "usuarios", user.uid), {
-                    nombre,
-                    email,
-                    telefono,
-                    pregunta,
-                    respuesta,
-                    bloqueado: true
+                    nombre, email, telefono, pregunta, respuesta,
+                    bloqueado: false, verificado: false, codigoVerificacion
                 });
 
-                showMessage("Usuario registrado exitosamente", "success");
-                window.location.href = "terminos.html";
+                console.log("✅ Usuario creado con UID:", user.uid);
+                await enviarCodigoVerificacion(email, codigoVerificacion);
+
+                window.location.href = `verificar.html?uid=${user.uid}`;
             } catch (error) {
-                manejarErrores(error);
+                showMessage(manejarErrores(error), "error");
             }
         });
     }
@@ -78,20 +100,30 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
-                // ✅ Bloquear la cuenta automáticamente después de iniciar sesión
-                await bloquearCuenta(user.uid);
+                // 📩 Generar y enviar nuevo código de verificación SIEMPRE
+                await generarCodigo(user.uid, email);
 
-                showMessage("Has iniciado sesión. Tu cuenta ha sido bloqueada.", "success");
+                if (!user.emailVerified) {
+                    showMessage("Nuevo código enviado. Verifica tu correo.", "info");
+                    setTimeout(() => {
+                        window.location.href = `verificar.html?uid=${user.uid}`;
+                    }, 2000);
+                    return;
+                }
 
-                window.location.href = "terminos.html";
+                showMessage("Nuevo código enviado. Redirigiendo al dashboard...", "success");
+                setTimeout(() => {
+                    window.location.href = "dashboard.html";
+                }, 2000);
+
             } catch (error) {
-                manejarErrores(error);
+                showMessage(manejarErrores(error), "error");
             }
         });
     }
 });
 
-
+// 🔒 Bloquear cuenta
 async function bloquearCuenta(uid) {
     try {
         await updateDoc(doc(db, "usuarios", uid), { bloqueado: true });
@@ -100,32 +132,25 @@ async function bloquearCuenta(uid) {
     }
 }
 
+// ❌ Manejo de errores
 function manejarErrores(error) {
-    switch (error.code) {
-        case "auth/email-already-in-use":
-            showMessage("El correo ya está en uso", "error");
-            break;
-        case "auth/invalid-email":
-            showMessage("Correo inválido", "error");
-            break;
-        case "auth/weak-password":
-            showMessage("Contraseña vulnerable", "error");
-            break;
-        case "auth/invalid-credential":
-            showMessage("Credenciales incorrectas", "error");
-            break;
-        default:
-            showMessage(error.message, "error");
-    }
+    const errores = {
+        "auth/email-already-in-use": "El correo ya está en uso.",
+        "auth/weak-password": "La contraseña debe tener al menos 6 caracteres.",
+        "auth/invalid-email": "El correo no es válido.",
+        "auth/invalid-credential": "Credenciales incorrectas."
+    };
+    return errores[error.code] || "Ocurrió un error. Inténtalo de nuevo.";
 }
 
-
+// 🔄 Alternar formularios de login y registro
 document.addEventListener("DOMContentLoaded", function () {
     const toggleForms = () => {
         document.getElementById('register-section').classList.toggle('d-none');
         document.getElementById('login-section').classList.toggle('d-none');
     };
 
+    // 📌 Validación de correo en el registro
     const validarCorreo = () => {
         const email = document.getElementById("register-email").value;
         const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -166,6 +191,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     window.toggleForms = toggleForms;
-
 });
 
