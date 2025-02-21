@@ -15,6 +15,9 @@ header {
 .container-fluid {
     background: linear-gradient(to right, rgb(181, 94, 190), rgb(62, 255, 226)), aqua;
 }
+div#offcanvasNavbar {
+    background: linear-gradient(to right, rgb(181, 94, 190), rgb(62, 255, 226)), aqua;
+}
 
 
 nav.navbar.bg-body-tertiary.fixed-top.menu-2 {
@@ -66,6 +69,16 @@ a.nav-link:hover{
     display: none;
     visibility: hidden;
 }
+
+.close-menu {
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 
 
 /* CONTENIDO */

@@ -32,77 +32,6 @@ p{
     margin-bottom: 1.5rem;
 }
 
-
-@import url('fonts.css');
-/* REVISEN LO QUE NOS MANDO YAPE PARA EL DISEÑO Y EL LOGO */
-body {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* NAVBAR */
-header {
-
-    padding: 5px;
-}
-
-.container-fluid, nav.navbar.bg-body-tertiary.fixed-top.menu-2 {
-    background: linear-gradient(to right, rgb(181, 94, 190), rgb(62, 255, 226)), aqua;
-}
-
-
-nav.navbar.fixed-top.navbar-expand-lg {
-    padding: 0;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    height: 100px;
-}
-
-.logo {
-    height: 100px;
-    margin-left: 20px;
-    transition: transform 0.4s ease-in-out;
-}
-
-.logo:hover {
-    transform: scale(1.2);
-}
-
-.menu1-ul {
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 80px;
-}
- 
-a.nav-link{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 60px;
-}
-
-a.nav-link:hover{
-    color: rgb(219, 185, 231);
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 60px;
-}
-
-.menu-1{
-    height: 105px;
-}
-
-.menu-2{
-    display: none;
-    visibility: hidden;
-}
-
-
 .btn-desbloquear {
     padding: 14px 28px;
     border-radius: 12px;
@@ -151,6 +80,10 @@ button#btn-desbloquear {
     left: 100%;
 }
 
+.navbar-nav{
+    gap: 0 !important;
+}
+
 
 /* RESPONSIVIDAD */
 
@@ -169,17 +102,14 @@ button#btn-desbloquear {
     section.hero-content.mb-4 {
         margin-top: 85px;
     }
-}
 
-@media screen and (max-width: 890px){
-    .nav-links a{
-        font-size: 14px;
+    .cont-bloq{
+        margin-top: 140px;
     }
-    .nav-links a i{
-        font-size: 14px;
-    }
-    .category-button{
-        font-size: 10px;
+
+    nav.navbar.bg-body-tertiary.fixed-top.menu-2 {
+        background: linear-gradient(to right, rgb(181, 94, 190), rgb(62, 255, 226)), aqua;
+
     }
 }
 

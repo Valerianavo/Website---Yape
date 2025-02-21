@@ -2,75 +2,6 @@ header {
 
     padding: 5px;
 }
-@import url('fonts.css');
-/* REVISEN LO QUE NOS MANDO YAPE PARA EL DISEÑO Y EL LOGO */
-body {
-    margin: 0;
-    padding: 0;
-}
-
-
-/* NAVBAR */
-header {
-
-    padding: 5px;
-}
-
-.container-fluid {
-    background: linear-gradient(to right, rgb(181, 94, 190), rgb(62, 255, 226)), aqua;
-}
-
-
-nav.navbar.fixed-top.navbar-expand-lg {
-    padding: 0;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    height: 100px;
-}
-
-.logo {
-    height: 100px;
-    margin-left: 20px;
-    transition: transform 0.4s ease-in-out;
-}
-
-.logo:hover {
-    transform: scale(1.2);
-}
-
-.menu1-ul {
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 80px;
-}
- 
-a.nav-link{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 60px;
-}
-
-a.nav-link:hover{
-    color: rgb(219, 185, 231);
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 60px;
-}
-
-.menu-1{
-    height: 105px;
-}
-
-.menu-2{
-    display: none;
-    visibility: hidden;
-}
-
 
 
 
@@ -90,7 +21,7 @@ iframe{
 }
 
 .navbar-nav {
-    gap: 110px;
+    gap: 0px;
 }
 
 .mb-1{
@@ -101,6 +32,10 @@ iframe{
     color: #7D2686;
 }
 
+.principal-seguridad{
+    margin-top: 50px;
+}
+
 .card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -108,6 +43,10 @@ iframe{
 .card:hover {
     transform: scale(1.05); 
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.card-img-top {
+    width: 90%;
+    border-radius: 0px !important;
 }
 
 .titulo-container {
@@ -173,6 +112,28 @@ iframe{
 }
 
 /* Para pantallas pequeñas, coloca el video encima del texto */
+
+@media screen and (max-width: 1004px){
+    .menu-2{
+        visibility: visible;
+    }
+    .menu-1, .hero-image{
+        display: none;
+    }
+    .hero{
+        max-width: 1400px;
+        width: 100%;
+        margin: 50px 30px 0px 30px;
+    }
+    section.hero-content.mb-4 {
+        margin-top: 85px;
+    }
+    h1.text-center.mb-1 {
+        margin-top: 110px;
+    }
+}
+
+
 @media (max-width: 768px) {
     .video-text-container {
         flex-direction: column;

@@ -7,68 +7,6 @@ body {
 }
 
 
-/* NAVBAR */
-header {
-
-    padding: 5px;
-}
-
-.container-fluid, nav.navbar.bg-body-tertiary.fixed-top.menu-2  {
-    background: linear-gradient(to right, rgb(181, 94, 190), rgb(62, 255, 226)), aqua;
-}
-
-
-nav.navbar.fixed-top.navbar-expand-lg {
-    padding: 0;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    height: 100px;
-}
-
-.logo {
-    height: 100px;
-    margin-left: 20px;
-    transition: transform 0.4s ease-in-out;
-}
-
-.logo:hover {
-    transform: scale(1.2);
-}
-
-.menu1-ul {
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 80px;
-}
- 
-a.nav-link{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 60px;
-}
-
-a.nav-link:hover{
-    color: rgb(219, 185, 231);
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 60px;
-}
-
-.menu-1{
-    height: 105px;
-}
-
-.menu-2{
-    display: none;
-    visibility: hidden;
-}
-
-
 .title{
     color: white;
     font-size: 2rem;
@@ -115,17 +53,13 @@ a.nav-link:hover{
 @media screen and (max-width: 1004px){
     .menu-2{
         visibility: visible;
+        display: block !important;
     }
-    .menu-1, .hero-image{
+    .menu-1 {
         display: none;
     }
-    .hero{
-        max-width: 1400px;
-        width: 100%;
-        margin: 50px 30px 0px 30px;
-    }
-    section.hero-content.mb-4 {
-        margin-top: 85px;
+    .col-md-8.card.p-4.shadow {
+        margin-top: 40px;
     }
 }
 
